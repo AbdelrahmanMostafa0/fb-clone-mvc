@@ -1,0 +1,95 @@
+﻿@{
+    Layout = "~/Views/Shared/Shared_nav_linked_files.cshtml";
+}
+
+
+<!-- add post section -->
+
+<div class="container add-post ">
+    <div class="card my-3" >
+
+        <form action="" class=" grid">
+            
+            <img  class="rounded-circle" src="~/images/demo-profile-img.jpg" />
+
+
+
+            <input type="text" id="post-text" name="post-text" placeholder="What's on your mind" required>
+            <input type="file" id="file" name="img" accept="image/*">
+            <label for="file" class="upload-btn">
+                <i class="upload-icon material-icons"
+                   style="font-size:36px">add_to_photos</i>
+            </label>
+            <input class="btn btn-outline-primary" type="submit" value="Post">
+
+        </form>
+        <hr>
+    </div>
+</div>
+
+<!-- ----------------------news feed section---------------- -->
+
+<div class="container posts-container">
+    <!-- post card -->
+    <div id="account-post" class="post card my-3">
+        <div id="account-info" class="user-info flex">
+            <img class="rounded-circle" src="~/images/demo-profile-img.jpg" />
+            <h5 id="account-name" class="account-name">Abdelrahman Mostafa</h5>
+        </div>
+        <hr>
+        <!-- post text -->
+        <p id="post-text" style="font-size: 20px;" class="my-2">
+            Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit.
+            Harum,asperiores!
+        </p>
+        <!-- post main img -->
+        <img id="post-img" src="~/images/meme.png" />
+   
+        <!-- likes count -->
+        <p class="likes-count my-2"><span id="likes-count">5</span> like this post</p>
+        <hr>
+        <!-- like and comment btns -->
+        <div class="post-interact flex">
+            <!-- like btn -->
+            <div id="like-btn" class="like">
+                <button class="btn btn-primary" href="">
+                    <i class="fa fa-thumbs-up" style="font-size:30px"></i> like</button>
+            </div>
+            <!-- comment btn -->
+            <div id="dislike-btn" class="like">
+                <button class="btn btn-primary">
+                    <i class="fa fa-thumbs-down"
+                       style="font-size:29px"></i>
+                    Dislike
+                </button>
+            </div>
+        </div>
+
+        <hr>
+        <div id="add-comment" class="add-comment">
+            <form action="">
+                <img id="user-img" class="rounded-circle"  style="width: 50px;" src="~/images/demo-profile-img.jpg" />
+
+                <input id="comment-text-input" style="border-radius: 40px;width: 70%;" type="text"
+                       placeholder="Add Comment">
+                <input id="submit-comment" class="btn btn-outline-primary" type="submit" value="Post">
+
+            </form>
+        </div>
+        <br>
+        <div class="view-comments">
+            <div id="comment" class="flex comment">
+                <img  class="rounded-circle" src="~/images/fb-profilr-placeholder.jpeg" />
+                <div class="comment-body">
+                    <p id="comment-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique expedita
+                        enim,
+                        suscipit facere et eveniet excepturi voluptatibus porro. Inventore, rem.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

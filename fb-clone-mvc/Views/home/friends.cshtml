@@ -1,0 +1,75 @@
+﻿
+@{
+    Layout = "~/Views/Shared/Shared_nav_linked_files.cshtml";
+}
+
+
+
+
+
+<!-- the main body container of both Request&Suggestion used bootstrap so some classs make no sence
+    what we need is the container with the class friend-request & friend-suggestion -->
+<div class="container card my-5">
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <!--Friend Request tab  -->
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="requests-tab" data-bs-toggle="tab" data-bs-target="#requests"
+                    type="button" role="tab" aria-controls="home" aria-selected="true">
+                Friend Request
+            </button>
+        </li>
+        <!-- Friend Suggestion -->
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="friends-tab" data-bs-toggle="tab" data-bs-target="#friends" type="button"
+                    role="tab" aria-controls="friends" aria-selected="false">
+                Friends
+            </button>
+        </li>
+    </ul>
+    <!-- tabs content -->
+    <div class="tab-content" id="myTabContent">
+        <!-- friend request container start  -->
+        <div class="tab-pane fade show active" id="requests" role="tabpanel" aria-labelledby="requests-tab">
+            <!-- friend request -->
+            <div id="friend-request" class="friend-request  py-3">
+                <a id="friend-request-profile" href="/home/view_friend_request_profile" class="account-data flex">
+                    <!-- account img -->
+                    <img class="account-img rounded-circle" src="~/images/demo-profile-img.jpg" />
+                    
+                    <!-- account name -->
+                    <h2 id="account-name" class="account-name">Abdelrahman Mostafa</h2>
+                </a>
+                <!-- btns -->
+                <div class="add-delete">
+                    <!--Accept btn  -->
+                    <button id="accept-add" class="btn btn-outline-primary">Accept</button>
+                    <!-- Delete -->
+                    <button id="delete-add" class="btn btn-outline-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------------------friend suggestion container start ---------------------- -->
+        <div class="tab-pane fade" id="friends" role="tabpanel" aria-labelledby="friends-tab">
+            <!-- friend suggestion -->
+            <div id="friend-suggestion" class="friend-suggestion  py-3">
+                <a href="/home/view_friend_profile" class="account-data flex">
+                    <!-- account img -->
+                    <img class="account-img rounded-circle" src="~/images/demo-profile-img.jpg" />
+                    <!-- account name  -->
+                    <h2 class="account-name">Abdelrahman Mostafa</h2>
+                </a>
+                <!-- sdd friend btn -->
+                <div class="view-friend">
+                    <a href="view-friend-profile.html" class="btn btn-outline-primary">View Profile</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
